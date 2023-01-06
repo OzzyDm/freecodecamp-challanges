@@ -2,14 +2,15 @@
 //Your response should be a number.
 
 function findLongestWordLength(str) {
-  let arr = str.split("");
-  let maxLength = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].length >= maxLength) {
-      maxLength = arr[i].length;
+  const arr = str.split(" ");
+  let longestWord = 0;
+
+  const sentence = arr.map((word) => {
+    if (word.length > longestWord) {
+      longestWord = word.length;
     }
-  }
-  return Maxlength;
+  });
+  return longestWord;
 }
 
 findLongestWordLength("The quick brown fox jumped over the lazy dog");
